@@ -1,0 +1,16 @@
+image:
+  file: .gitpod.Dockerfile
+
+tasks:
+  - name: Start VNC Server
+    init: >
+      vncserver :1 &&
+      websockify --web /usr/share/novnc/ 6080 localhost:5901 &
+  - name: Setup Environment
+    command: |
+      # Add commands to set up your environment or start your application
+      echo "Setup complete"
+
+ports:
+  - port: 6080
+    onOpen: open-preview
