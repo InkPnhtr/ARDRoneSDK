@@ -1,7 +1,8 @@
 FROM i386/ubuntu:xenial
 
 # Install necessary dependencies
-#RUN apt-get update && apt-get install -y \
+RUN apt-get install git \
+    #apt-get update &&   -y \
     #build-essential \
     #libssl-dev \
     #libffi-dev \
