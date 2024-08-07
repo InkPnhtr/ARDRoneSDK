@@ -1,8 +1,8 @@
-FROM i386/ubuntu:xenial
+FROM i386/ubuntu:16.04
 
 # Install necessary dependencies
 RUN apt-get install git \
-    #apt-get update &&   -y \
+    apt-get update &&   -y \
     #build-essential \
     #libssl-dev \
     #libffi-dev \
